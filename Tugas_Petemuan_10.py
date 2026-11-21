@@ -1,71 +1,47 @@
-#List Kendaraan 
-Kendaraan = ["Motor", "Mobil", "Sepeda", "Bus"]
-print(f"Data awal = {Kendaraan}")
+# 1 TUPlE DAN SET
 
-# a menambahkan 'truk' di akhir list 
-Kendaraan.append("truk")
-print(f"a. setelah di tambah truk = {Kendaraan}")
+Mahasiswa = ("Azkandytad Davia Nusa Satrya", "2605060066", "Teknologi Informasi")
+print("Data Mahasiswa:", Mahasiswa)
 
-# b menyisipkan 'becak' pada index ke-1
-Kendaraan.insert(1, "becak")
-print(f"b. setelah disisipkan becak = {Kendaraan}")
+print("NIM:", Mahasiswa[1])
+print("Program Studi:", Mahasiswa[2])
 
-# c menghapus data paling belakang
-Kendaraan.pop()
-print(f"c. setelah data terakhir dihapus = {Kendaraan}" )
+nilai_angka = {10, 4, 3, 2, 4, 10, 7, 5}
+print("Nilai Angka:", nilai_angka)
 
-# d mengubah 'sepeda' menjadi 'skuter' 
-Kendaraan[3] = "skuter"
-print(f"d. setelah sepeda diubah menjadi skuter = {Kendaraan}")
+# 2 Manipulasi Dictionary
+data_mahasiswa = {
+    "nim": "240101",
+    "nama": "Budi Santoso",
+    "prodi": "Teknologi Informasi"
+}
 
-# e menampilkan jumlah total data 
-jumlah_data = len (Kendaraan)
-print(f"e. jumlah total data = {jumlah_data}")
+print("Data Awal:", data_mahasiswa)
 
-# SOAL 2 
+data_mahasiswa["prodi"] = "Sastra Mesin"
+data_mahasiswa["angkatan"] = 2026
 
-# List nilai siswa
-angka = [75 , 80, 90, 75, 85, 100, 65]
-print(f"data nilai siswa = {angka}")
+print("Setelah Diubah:", data_mahasiswa)
 
-# a mencari index skor 100
-index_100 = angka.index (100)
-print(f"a. index skor 100 = {index_100}")
+del data_mahasiswa["nim"]
+print("Data Mahasiswa Akhir:", data_mahasiswa)
 
-# b jumlah siswa yang 75
-skor_75 = angka.count(75)
-print(f"b. siswa yang mendaoatkan skor 75 ada ={skor_75}")
+# 3 Perulangan pada Dicitionary
+keranjang = {
+    "apel": 5000,
+    "pisang": 3000,
+    "jeruk": 7000,
+    "anggur": 15000
+}
+print(" Daftar Harga Buah ")
 
-# c mengurutkan nilai dari kecil hingga besar 
-angka.sort()
-print(f"c. Mengurutkan data kecil kebesar = {angka}")
+for barang, harga in keranjang.items():
+    print(f"Harga {barang}: Rp {harga}")
+    
 
-# d membalikan nilai dari terbesar ke terkecil 
-angka.reverse()
-print(f"d. membalikan nilai dari terbesar ke terkecil = {angka}")
+total_belanja = 0
 
-# Soal 3
-menu_utama = ["Nasi Goreng", "Mie ayam"]
-menu_tambahan = ["kerupuk", "Es teh"]
+for harga in keranjang.values():
+    total_belanja += harga
 
-#menggabukan menu tambah ke menu utama dan menampilkan hasil gabungan
-menu_utama.extend(menu_tambahan)
-print(f"menu utama setelah digabungkan = {menu_utama}")
-
-# Soal 4
-# Data barang dan harga
-data_barang = [
-    ["Buku", 5000],
-    ["Pensil", 2000],
-    ["Penggaris", 3000]
-]
-
-# a menampilkan harga pensil
-harga_pensil = data_barang[1][1]
-print(f"a. harga pensil = {harga_pensil}")
-
-# b menampilkan semua data dengan perulangan for
-print("b. data barang : ")
-
-for barang in data_barang :
-    print(barang)
+print("Total Belanja: Rp", total_belanja)
